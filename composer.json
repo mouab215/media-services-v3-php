@@ -1,0 +1,24 @@
+{
+    "name": "mouab215/media-services-v3-php",
+    "description": "PHP SDK for communicating with Azure Media Services API v3",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mourad Abouhcen",
+            "email": "mouab215@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Mouab215\\MediaServices\\": "src/"
+        }
+    },
+    "extra": {
+        "providers": [
+            "Mouab215\\MediaServices\\SDKServiceProvider"
+        ]
+    }
+}
