@@ -17,8 +17,10 @@
         }
     },
     "extra": {
-        "providers": [
-            "Mouab215\\MediaServices\\SDKServiceProvider"
-        ]
+        "laravel": {
+            "providers": [
+                "Mouab215\\MediaServices\\SDKServiceProvider"
+            ]
+        }
     }
 }
