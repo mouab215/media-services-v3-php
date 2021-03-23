@@ -11,8 +11,16 @@ class MediaServicesController extends Controller
     {
         // Get Azure Ad token
         $client = new Client();
-        $response = $client->request('POST', 'https://login.microsoftonline.com/:aadTenantDomain/oauth2/token');
-        dd($response);
+        $response = $client->request('POST',
+            'https://login.microsoftonline.com/'. config('media-services.tenantDomain') . '/oauth2/token',
+            ['form_params' => [
+                'grant_type' => 'client_credentials',
+                'client_id' => config('media-services.clientId'),
+                'client_secret' => config('media-services.clientSecret'),
+                'resource' => 'https://management.core.windows.net/',
+            ]]
+        );
+        dd($response->getBody()->getContents());
 
 //        echo $response->getStatusCode(); // 200
         echo $response->getHeaderLine('content-type'); // 'application/json; charset=utf8'
