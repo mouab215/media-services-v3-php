@@ -20,7 +20,8 @@ class MediaServicesController extends Controller
                 'resource' => 'https://management.core.windows.net/',
             ]]
         );
-        dd($response->getBody()->getContents());
+        $content = json_decode($response->getBody()->getContents(), true);
+        dd($content['access_token']);
 
 //        echo $response->getStatusCode(); // 200
         echo $response->getHeaderLine('content-type'); // 'application/json; charset=utf8'

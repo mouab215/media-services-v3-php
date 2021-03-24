@@ -10,4 +10,5 @@ return [
     'accountName' => 'YOUR_MEDIA_ACCOUNT_NAME',
     'storageAccountName' => 'YOUR_STORAGE_ACCOUNT_NAME',
     'resourceGroup' => 'YOUR_RESOURCE_GROUP_NAME',
+    'apiVersion' => 'API_VERSION',
 ];
